@@ -107,8 +107,6 @@ fn distance_Env3x3_L1(a: Env3x3, b: Env3x3) -> Float32:
     return norm_fac * Float32(d)
 
 
-# 128-bit/256-bit SIMD register version
-# uint8 -> uint16 needs more space ...
 fn distance_Env3x3_L1_simd(a: Env3x3, b: Env3x3) -> Float32:
     # there are 9*4 = 36 uint8 values to process: 2*16 + 4
     var d: Int = 0
